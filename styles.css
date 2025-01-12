@@ -1,0 +1,303 @@
+/* General Styles for Body */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+
+    /* Centering content and adding background gradient animation */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Initial pastel gradient background with animation */
+    background: linear-gradient(to right, #fbd3e9, #bbd2c5);
+    animation: pastelBackgroundAnimation 12s infinite alternate ease-in-out;
+}
+
+/* Keyframes for animated pastel background gradient */
+@keyframes pastelBackgroundAnimation {
+    0% {
+        background: linear-gradient(to right, #fbd3e9, #bbd2c5); /* Pink to Mint */
+    }
+    25% {
+        background: linear-gradient(to right, #fbc2eb, #a6c1ee); /* Light Pink to Light Blue */
+    }
+    50% {
+        background: linear-gradient(to right, #ffdde1, #ee9ca7); /* Peach to Soft Rose */
+    }
+    75% {
+        background: linear-gradient(to right, #d4fc79, #96e6a1); /* Soft Green Tones */
+    }
+    100% {
+        background: linear-gradient(to right, #c1dfc4, #deecdd); /* Mint Green to Soft White */
+    }
+}
+
+/* Container Styles */
+.container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+
+    /* Subtle scale animation */
+    animation: fadeInScale 1.5s ease-in-out;
+    text-align: center;
+    width: 85%;
+    max-width: 550px;
+}
+
+/* Fade-in and scale animation for the container */
+@keyframes fadeInScale {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Heading Styles */
+h1 {
+    font-size: 28px;
+    color: #555;
+    margin-bottom: 15px;
+
+    /* Animated underline effect */
+    position: relative;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background: #a6c1ee;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.4s ease-in-out;
+}
+
+h1:hover::after {
+    width: 100%;
+}
+
+/* Paragraph Styles */
+p {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 25px;
+}
+
+/* Unique Button Design */
+.btn {
+    padding: 12px 25px;
+    font-size: 16px;
+    color: white;
+
+    /* Button pastel gradient */
+    background: linear-gradient(to right, #ee9ca7, #ffdde1); /* Rose to Peach */
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+
+    /* Add shadow and transitions */
+    box-shadow: 0 8px 15px rgba(238, 156, 167, 0.3);
+    transition: all 0.4s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.btn:hover {
+    background: linear-gradient(to right, #f6d365, #fda085); /* Soft Orange tones */
+    transform: translateY(-5px); /* Lift effect */
+    box-shadow: 0 15px 25px rgba(246, 211, 101, 0.4);
+}
+
+.btn:active {
+    transform: translateY(0); /* Reset on click */
+    box-shadow: 0 4px 8px rgba(246, 211, 101, 0.2);
+}
+
+/* Output Section Styles */
+.output {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #444;
+    text-align: left;
+    padding: 15px;
+    border-radius: 10px;
+    background: #f9f9f9;
+    border-left: 6px solid #a6c1ee; /* Pastel Blue Border */
+    animation: slideIn 1s ease-in-out;
+}
+
+/* Slide-in animation for output section */
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Scroll Bar Styling */
+.container {
+    max-height: 400px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #a6c1ee #f0f0f0;
+}
+
+.container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.container::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 5px;
+}
+
+.container::-webkit-scrollbar-thumb {
+    background: #a6c1ee;
+    border-radius: 5px;
+}
+
+/* Unique Buttons */
+
+/* Primary Button */
+.btn-primary {
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+
+    /* Bright gradient background */
+    background: linear-gradient(to right, #ff6a00, #ee0979); /* Orange to Magenta */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+
+    /* Add shadow and transitions */
+    box-shadow: 0 8px 15px rgba(255, 106, 0, 0.3);
+    transition: all 0.4s ease-in-out;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(to right, #fcb045, #ff8008); /* Bright Orange tones */
+    transform: scale(1.1);
+    box-shadow: 0 15px 25px rgba(252, 176, 69, 0.4);
+}
+
+/* Circular Neon Button */
+.btn-circular {
+    width: 60px;
+    height: 60px;
+    font-size: 18px;
+    color: white;
+    border: none;
+
+    /* Neon gradient */
+    background: linear-gradient(to right, #1a2a6c, #b21f1f, #fdbb2d); /* Blue, Red, Yellow */
+    border-radius: 50%;
+    cursor: pointer;
+
+    /* Neon glow effect */
+    box-shadow: 0 0 20px rgba(26, 42, 108, 0.5), 0 0 40px rgba(242, 177, 45, 0.8);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.btn-circular:hover {
+    transform: rotate(360deg);
+    box-shadow: 0 0 30px rgba(26, 42, 108, 0.8), 0 0 60px rgba(242, 177, 45, 1);
+}
+
+/* Gradient Outline Button */
+.btn-outline {
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #6200ea;
+    background: transparent;
+
+    /* Bright gradient border */
+    border: 3px solid;
+    border-image: linear-gradient(to right, #ff6a00, #ee0979) 1;
+    border-radius: 5px;
+    cursor: pointer;
+
+    /* Transition effect */
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-outline:hover {
+    background: linear-gradient(to right, #ff6a00, #ee0979);
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* 3D Button */
+.btn-3d {
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+
+    /* Bright background */
+    background: linear-gradient(to bottom, #12c2e9, #c471ed, #f64f59); /* Aqua to Pink */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    /* Shadow for 3D effect */
+    box-shadow: 0 5px 0 #c471ed, 0 10px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-3d:hover {
+    box-shadow: 0 3px 0 #c471ed, 0 6px 10px rgba(0, 0, 0, 0.3);
+    transform: translateY(2px);
+}
+
+/* Floating Button */
+.btn-floating {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 70px;
+    height: 70px;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    line-height: 70px;
+
+    /* Bright gradient with animation */
+    background: linear-gradient(45deg, #ff0099, #493240);
+    border-radius: 50%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+
+    /* Pulse animation */
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    50% {
+        transform: scale(1.2);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    }
+}
+
+.btn-floating:hover {
+    transform: scale(1.3);
+    background: linear-gradient(45deg, #493240, #ff0099);
+}
